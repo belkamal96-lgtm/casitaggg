@@ -4,7 +4,11 @@ import { createServer as createViteServer } from 'vite';
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  // In AI Studio, dev server must bind to port 3000 behind reverse proxy.
+  // On deployment platforms like Render, use process.env.PORT provided by the host.
+  const PORT = (!process.env.K_SERVICE && process.env.PORT)
+    ? parseInt(process.env.PORT, 10)
+    : 3000;
 
   app.use(express.json());
 
