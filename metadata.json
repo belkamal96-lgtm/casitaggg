@@ -1,0 +1,6 @@
+{
+  "name": "Cash App Simulator",
+  "description": "A Cash App simulation app for school projects featuring keypad payment flows, recipient selection, simulated Face ID verification, and payment confirmation screens.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
